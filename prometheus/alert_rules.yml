@@ -1,0 +1,11 @@
+groups:
+  - name: nginx-alerts
+    rules:
+      - alert: NginxDown
+        expr: probe_success{job="blackbox-http"} == 0
+        for: 15s
+        labels:
+          severity: critical
+        annotations:
+          summary: "NGINX service is down"
+          description: "NGINX website is not responding."

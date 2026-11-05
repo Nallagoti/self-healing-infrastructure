@@ -1,0 +1,28 @@
+global:
+  resolve_timeout: 5m
+
+route:
+  receiver: nginx-recovery
+  group_by: ['alertname']
+  group_wait: 5s
+  group_interval: 30s
+  repeat_interval: 1h
+
+receivers:
+  - name: nginx-recovery
+    email_configs:
+      - to: 'YOUR_GMAIL_ADDRESS'
+        from: 'YOUR_GMAIL_ADDRESS'
+        smarthost: smtp.gmail.com:587
+        auth_username: 'YOUR_GMAIL_ADDRESS'
+        auth_password_file: /etc/prometheus/gmail_app_password
+        send_resolved: true
+        require_tls: true
+
+    webhook_configs:
+      - url: 'http://127.0.0.1:5000/alert'
+        send_resolved: false
+        http_config:
+          authorization:
+            type: Bearer
+            credentials_file: /etc/prometheus/webhook_token

@@ -1,0 +1,14 @@
+[Unit]
+Description=Self Healing NGINX Webhook Receiver
+After=network.target
+
+[Service]
+Type=simple
+User=prometheus
+Group=prometheus
+ExecStart=/usr/bin/python3 /opt/self-healing/webhook.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,16 @@
+.env
+*.env
+*.pem
+*.key
+.htpasswd
+gmail_app_password
+webhook_token
+__pycache__/
+*.pyc
+*.crt
+*.log
+*.tfstate
+*.tfstate.*
+.terraform/
+*.bak
+*.swp

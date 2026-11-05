@@ -1,0 +1,12 @@
+---
+- name: Recover NGINX service
+  hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+    - name: Ensure NGINX is running
+      ansible.builtin.service:
+        name: nginx
+        state: started
+        enabled: true
