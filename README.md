@@ -78,3 +78,23 @@ self-healing-infrastructure/
 Nissitha Nallagoti
 
 DevOps Engineer | Fresher
+
+## Project Screenshots
+
+### NGINX Website
+![NGINX Website](screenshots/Nginx-Website.jpeg)
+
+### Prometheus Monitoring
+![Prometheus Targets](screenshots/Prometheus%20Targets.jpeg)
+
+### Alertmanager Dashboard
+![Alertmanager](screenshots/Alert%20Manager.jpeg)
+
+### Ansible Auto Recovery
+![Ansible Auto Recovery](screenshots/Ansible-auto-recovery.jpeg)
+
+### Gmail Firing Alert
+![Gmail Firing](screenshots/Gmail-Nginx-Firing.jpeg)
+
+### Gmail Resolved Alert
+![Gmail Resolved](screenshots/Gmail-nginx-reslove.jpeg)
